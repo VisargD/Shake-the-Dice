@@ -1,5 +1,5 @@
 # Shake-the-Dice
-<h2>A simple flutter app that rolls the dice on SHAKE or TOUCH.</h2>
+<h2>A simple app that rolls the dice on SHAKE or TOUCH.</h2>
 <p align="center">
 <img src="https://github.com/VisargD/Shake-the-Dice/blob/master/dice.png" alt="App Icon">
 </p>
