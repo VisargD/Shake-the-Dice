@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   shake: ^0.1.0
-
+  vibration: ^1.4.0
   cupertino_icons: ^0.1.2
 
 dev_dependencies:

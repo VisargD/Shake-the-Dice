@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 import 'package:shake/shake.dart';
+import 'package:vibration/vibration.dart';
 
 void main() {
   return runApp(
@@ -30,18 +31,25 @@ class _DicePageState extends State<DicePage> {
   int leftDiceNumber = 1;
   int rigthDiceNumber = 1;
 
-  void DiceRoll() {
+  void diceRoll() {
     leftDiceNumber = lst[ran.nextInt(lst.length)];
     rigthDiceNumber = lst[ran.nextInt(lst.length)];
   }
 
   void initState() {
     super.initState();
-    ShakeDetector detector = ShakeDetector.autoStart(onPhoneShake: () {
+    ShakeDetector.autoStart(onPhoneShake: () {
       setState(() {
-        DiceRoll();
+        diceRoll();
+        vibrate();
       });
     });
+  }
+
+  Future<void> vibrate() async {
+    if (await Vibration.hasVibrator()) {
+      Vibration.vibrate(duration: 250);
+    }
   }
 
   @override
@@ -53,7 +61,8 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
-                  DiceRoll();
+                  diceRoll();
+                  vibrate();
                 });
               },
               child: Image.asset('images/dice$leftDiceNumber.png'),
@@ -63,7 +72,8 @@ class _DicePageState extends State<DicePage> {
             child: FlatButton(
               onPressed: () {
                 setState(() {
-                  DiceRoll();
+                  diceRoll();
+                  vibrate();
                 });
               },
               child: Image.asset('images/dice$rigthDiceNumber.png'),
