@@ -16,15 +16,20 @@ On the top of this starter project two different features were implemented. This
   
   1. TOUCH the dice.
   2. SHAKE the phone.
- 
+
+The device will also VIBRATE on every dice roll.  
   
 The shake feature was implemented by using the shake package. For more information visit https://pub.dev/packages/shake .
+
+The vibrate feature was implemented using the vibration package. For more information visit https://pub.dev/packages/vibration .
 
 <div>The Icons are made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 <br>
 
+The icons were made using https://appicon.co/ .
+
 <p>
-  <b>The finished app looks like this:</b>
+  <h3>The finished app looks like this:</h3>
 </p>
 <p>
 <img src="https://github.com/VisargD/Shake-the-Dice/blob/master/Screenshots/Dice_roll1.jpg" alt="Dice Roll 1" width=300>
